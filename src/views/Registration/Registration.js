@@ -1,9 +1,9 @@
 import './Registration.scss'
-import HelloWorld from '@/components/HelloWorld.vue'
+import Signup from '@/components/Signup/Signup.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    Signup
   }
 }

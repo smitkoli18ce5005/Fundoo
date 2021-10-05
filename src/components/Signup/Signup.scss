@@ -1,0 +1,56 @@
+.signup-outer-div{
+    width: 100vw;
+    height: 100vh;
+}
+.signup-holder{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup-inner-div{
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    grid-gap: 0 10%;
+    width: 700px;
+    height: 550px;
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 10px;
+    padding: 2rem;
+}
+.form{
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    align-items: center;
+    grid-gap: 4%;
+}
+.input-pair-1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 8%;
+}
+.input-pair-2{
+    display: grid;
+    grid-template-rows: repeat(2, 1r);
+}
+.signin-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.logo-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    figure{
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+.show-password-div{
+    display: flex;
+    align-items: center;
+}
