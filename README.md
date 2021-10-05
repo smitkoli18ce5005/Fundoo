@@ -2,4 +2,5 @@
 
 ## What's done?
 * Todoo component to get, add and delete posts by calling api
-* Created signup page
+* Created Signup page
+* Created Login page

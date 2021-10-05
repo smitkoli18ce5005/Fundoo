@@ -152,4 +152,10 @@ input[type="password"][required] + label[placeholder]:before {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@media screen and (max-width:320px) {
+  .blue-link-1{
+    font-size: 14px;
+  }
+}
 </style>

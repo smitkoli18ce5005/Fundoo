@@ -42,7 +42,7 @@
                             <small class="small-text-2">Show password</small>
                         </div>
                         <div class="signin-div">
-                            <a class="blue-link-1" href="#">Sign in instead</a>
+                            <a class="blue-link-1" href="http://localhost:8080/signin">Sign in instead</a>
                             <button class="blue-button-1">Next</button>
                         </div>
                     </div>
