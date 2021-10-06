@@ -5,3 +5,4 @@
 * Created Signup page
 * Created Login page
 * Created material input component for text and added fundoo logo
+* Created Forget password and Reset password page and also made it responsive
