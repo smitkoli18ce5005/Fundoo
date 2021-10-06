@@ -19,7 +19,7 @@
 .form-1{
     display: grid;
     grid-template-rows: repeat(5, 1fr);
-    svg{
+    .gradient-text{
         margin-left: auto;
         margin-right: auto;
     }
@@ -48,7 +48,7 @@
     }
     .form-1{ 
         grid-template-rows: repeat(5, 0.8fr);
-        svg{
+        .gradient-text{
             margin-top: 10%;
         }
         h1{
@@ -56,6 +56,26 @@
         }
         .input-pair-2{
             margin-top: 5%;
+        }
+    }
+    .input-pair-2{
+        .gradient-text{
+            margin-bottom: 20px;
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .form-1{
+        .signin-div{
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .form-1{
+        .signin-div{
+            margin-bottom: 30px;
         }
     }
 }
