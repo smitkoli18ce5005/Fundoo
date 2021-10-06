@@ -6,7 +6,6 @@
                     <div class="form">
                         <div class="input-pair-2"><h1 class="gradient-text">Fundoo</h1>
                         <h1 class="heading-h1">Create your Fundoo Account</h1></div>
-                        
                         <div class="input-pair-2">
                             <div class="input-pair-1">
                                 <TextInput v-bind:inputType="'text'" v-bind:id="'firstName'" v-bind:placeHolder="'First Name'" v-bind:error="false" />

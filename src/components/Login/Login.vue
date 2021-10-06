@@ -11,6 +11,10 @@
                     <div class="input-pair-2">
                         <TextInput v-bind:inputType="'text'" v-bind:id="'email-or-phone'" v-bind:placeHolder="'Email or phone'" v-bind:error="false" />
                         <small v-if="false" class="small-text-1 error">There was an error</small>
+                    </div>
+                    <div class="input-pair-2">
+                        <TextInput v-bind:inputType="'password'" v-bind:id="'password'" v-bind:placeHolder="'Password'" v-bind:error="false" />
+                        <small v-if="false" class="small-text-1 error">There was an error</small>
                         <a class="blue-link-1" href="#">Forgot email?</a>
                     </div>
                     <div class="input-pair-2">
