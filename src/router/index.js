@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Registration/Registration.vue'
 import Todoos from '../views/Todoos/Todoos.vue'
-import Signin from '../views/Signin/Signin.vue'
+import SignUp from '../views/SignUp/SignUp.vue'
+import SignIn from '../views/SignIn/SignIn.vue'
 import ForgetPassword from '../views/ForgetPassword/ForgetPassword.vue'
 import ResetPassword from '../views/ResetPassword/ResetPassword.vue'
 
@@ -9,26 +9,31 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: SignIn
   },
   {
-    path: '/todoo',
-    name: 'todoo',
+    path: '/Todoos',
+    name: 'Todoos',
     component: Todoos
   },
   {
-    path: '/signIn',
-    name: 'signIn',
-    component: Signin
+    path: '/Signup',
+    name: 'Signup',
+    component: SignUp
   },
   {
-    path: '/forgetPassword',
-    name: 'forgePassword',
+    path: '/SignIn',
+    name: 'SignIn',
+    component: SignIn
+  },
+  {
+    path: '/ForgetPassword',
+    name: 'ForgetPassword',
     component: ForgetPassword
   },
   {
-    path: '/resetPassword',
-    name: 'resetPassword',
+    path: '/ResetPassword',
+    name: 'ResetPassword',
     component: ResetPassword
   }
 ]

@@ -1,5 +1,5 @@
 <template>
-    <div class="blue-link">
+    <div v-show="link" class="blue-link">
         <a :href="link" v-text="textValue"></a>
     </div>
 </template>
