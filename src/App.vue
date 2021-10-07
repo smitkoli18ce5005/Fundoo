@@ -76,38 +76,6 @@ body{
   line-height: 1.42;
   color: #666;
 }
-.blue-link-1{
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Roboto', sans-serif;
-  text-decoration: none;
-  color: #1a73e8;
-  font-size: 16px;
-  line-height: 1.42;
-  width: max-content;
-  padding: 1%;
-}
-.blue-link-1:hover{
-  background-color: #e9f4fb;
-  border-radius: 4px;
-}
-.blue-button-1{
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 1.42;
-  padding: 1%;
-  text-align: center;
-  cursor: pointer;
-  background-color: #1a73e8;
-  color: #fff;
-  border-radius: 4px;
-  border-width: 0;
-  height: 35px;
-  width: 80px;
-}
-.blue-button-1:hover{
-  background-color: #3566b8;
-}
 .checkbox-input{
   width: 18px;
   height: 18px;
@@ -115,9 +83,5 @@ body{
 }
 
 
-@media screen and (max-width:320px) {
-  .blue-link-1{
-    font-size: 14px;
-  }
-}
+
 </style>

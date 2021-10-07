@@ -1,0 +1,22 @@
+.blue-link {
+  a {
+    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: #1a73e8;
+    font-size: 16px;
+    line-height: 1.42;
+    padding: 4px;
+  }
+  a:hover {
+    background-color: #e9f4fb;
+    border-radius: 4px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .blue-link {
+    a {
+      font-size: 14px;
+    }
+  }
+}

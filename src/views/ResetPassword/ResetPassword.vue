@@ -20,8 +20,8 @@
                     <small class="small-text-2">Show password</small>
                 </div>
                 <div class="signin-div">
-                        <a class="blue-link-1" href="http://localhost:8080/forgetPassword">Resend email?</a>
-                        <button class="blue-button-1">Next</button>
+                        <BlueLink v-bind:link="'http://localhost:8080/forgetPassword'" v-bind:textValue="'Resend email?'" />
+                        <BlueButton v-bind:textValue="'Next'" />
                 </div>
             </div>
         </div>
@@ -29,10 +29,15 @@
 </template>
 <script>
 import TextInput from '@/components/Material/TextInput/TextInput.vue'
+import BlueLink from '@/components/Material/BlueLink/BlueLink.vue'
+import BlueButton from '@/components/Material/BlueButton/BlueButton.vue'
+
 export default {
     name: 'ResetPassword',
     components:{
-        TextInput
+        TextInput,
+        BlueLink,
+        BlueButton,
     }
 }
 </script>

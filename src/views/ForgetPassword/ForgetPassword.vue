@@ -12,8 +12,8 @@
                     <small v-if="false" class="small-text-1 error">There was an error</small>
                 </div>
                 <div class="signin-div">
-                        <a class="blue-link-1" href="http://localhost:8080/">&nbsp;</a>
-                        <button class="blue-button-1">Next</button>
+                        <BlueLink />
+                        <BlueButton v-bind:textValue="'Next'" />
                 </div>
             </div>
         </div>
@@ -22,10 +22,15 @@
 
 <script>
 import TextInput from '@/components/Material/TextInput/TextInput.vue'
+import BlueLink from '@/components/Material/BlueLink/BlueLink.vue'
+import BlueButton from '@/components/Material/BlueButton/BlueButton.vue'
+
 export default {
     name: 'ForgetPassword',
     components:{
-        TextInput
+        TextInput,
+        BlueLink,
+        BlueButton
     }
 }
 </script>

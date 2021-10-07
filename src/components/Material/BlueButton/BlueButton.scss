@@ -1,0 +1,22 @@
+
+.blue-button{
+    margin-left: auto;
+    button{
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        line-height: 1.42;
+        padding: 1%;
+        text-align: center;
+        cursor: pointer;
+        background-color: #1a73e8;
+        color: #fff;
+        border-radius: 4px;
+        border-width: 0;
+        height: 35px;
+        width: 80px;
+    }
+    button:hover{
+        background-color: #3566b8;
+    }   
+}
