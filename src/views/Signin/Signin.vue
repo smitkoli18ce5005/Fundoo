@@ -21,7 +21,7 @@
                     <BlueLink v-bind:link="'https://support.google.com/chrome/answer/6130773?hl=en'" v-bind:textValue="'Learn more'" />
                 </div>
                 <div class="signin-div">
-                    <BlueLink v-bind:link="'http://localhost:8080/'" v-bind:textValue="'Create account'" />
+                    <BlueLink v-bind:link="'http://localhost:8080/SignUp'" v-bind:textValue="'Create account'" />
                     <BlueButton v-bind:textValue="'Next'" />
                 </div>
             </div>

@@ -33,7 +33,7 @@
                         <small class="small-text-2">Show password</small>
                     </div>
                     <div class="signin-div">
-                        <BlueLink v-bind:link="'http://localhost:8080/login'" v-bind:textValue="'Sign in instead'" />
+                        <BlueLink v-bind:link="'http://localhost:8080/SignIn'" v-bind:textValue="'Sign in instead'" />
                         <BlueButton v-bind:textValue="'Next'" />
                     </div>
                 </div>
