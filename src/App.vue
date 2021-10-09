@@ -9,7 +9,6 @@
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@700&display=swap');
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -30,19 +29,6 @@ body{
       color: #42b983;
     }
   }
-}
-.gradient-text{
-    text-transform: uppercase;
-	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
-	-webkit-background-clip: text;
-  background-clip: text;
-	-webkit-text-fill-color: transparent;
-    font-size: 24px;
-    font-family: 'Delius Unicase', cursive;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-    margin-top: 4px;
 }
 .heading-h1{
   font-family: 'Open Sans', sans-serif;

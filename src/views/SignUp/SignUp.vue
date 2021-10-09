@@ -4,7 +4,7 @@
             <div class="signup-div">
                 <div class="signup-form">
                     <div class="input-pair-2">
-                        <h1 class="gradient-text">Fundoo</h1>
+                        <FundooLogo />
                         <h1 class="heading-h1">Create your Fundoo Account</h1>
                     </div>
                     <div class="input-pair-2">
@@ -23,14 +23,14 @@
                      <BlueLink v-bind:link="''" v-bind:textValue="'Use my current email address instead'" />
                      <div class="password-div">
                         <div class="input-pair-1">
-                            <TextInput v-bind:inputType="'password'" v-bind:id="'password'" v-bind:placeHolder="'Password'" v-bind:error="v$.password.password.$error" v-model:data.sync="password.password" />
-                            <TextInput v-bind:inputType="'password'" v-bind:id="'confirm'" v-bind:placeHolder="'Confirm'" v-bind:error="v$.password.confirmPassword.$error" v-model:data.sync="password.confirmPassword" />
+                            <TextInput v-bind:inputType="showPassword ? 'text' : 'password'" v-bind:id="'password'" v-bind:placeHolder="'Password'" v-bind:error="v$.password.password.$error" v-model:data.sync="password.password" />
+                            <TextInput v-bind:inputType="showPassword ? 'text' : 'password'" v-bind:id="'confirm'" v-bind:placeHolder="'Confirm'" v-bind:error="v$.password.confirmPassword.$error" v-model:data.sync="password.confirmPassword" />
                         </div>
                         <small v-if="v$.password.$error" class="small-text-1 error" v-text="v$.password.$errors[0].$message"></small>
                         <small v-else class="small-text-1">Use 8 or more characters with a mix of letters, numbers &amp; symbols</small>
                     </div>
                     <div class="show-password-div">
-                        <input class="checkbox-input" type="checkbox" id="showPassword" name="showPassword">
+                        <input class="checkbox-input" type="checkbox" id="showPassword" name="showPassword" v-model="showPassword">
                         <small class="small-text-2">Show password</small>
                     </div>
                     <div class="signin-div">
