@@ -13,6 +13,14 @@ export default{
         },
         error: {
             type: Boolean
+        },
+        data: {
+            type: String
+        }
+    },
+    data(){
+        return{
+            inputData: this.data
         }
     }
 }

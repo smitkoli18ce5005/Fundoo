@@ -8,3 +8,4 @@
 * Created Forget password and Reset password page and also made it responsive
 * Created material BlueButton and BlueLink component
 * Code refactoring with separate JS, scss files
+* Validation for signup page using Vuelidate and added custom error messages
