@@ -3,10 +3,7 @@
         <div class="signup-inner-div">
             <div class="signup-div">
                 <div class="signup-form">
-                    <div class="input-pair-2">
-                        <FundooLogo />
-                        <h1 class="heading-h1">Create your Fundoo Account</h1>
-                    </div>
+                    <FundooHeader v-bind:title="'Create your Fundoo Account'" />
                     <div class="input-pair-2">
                         <div class="input-pair-1">
                             <TextInput v-bind:inputType="'text'" v-bind:id="'firstName'" v-bind:placeHolder="'First Name'" v-bind:error="v$.name.firstName.$error" v-model:data.sync="name.firstName" />
@@ -20,7 +17,7 @@
                         <small v-if="v$.email.$error" class="small-text-1 error" v-text="v$.email.$errors[0].$message"></small>
                         <small v-else class="small-text-1">You can use letters, numbers and periods</small>
                      </div>
-                     <BlueLink v-bind:link="''" v-bind:textValue="'Use my current email address instead'" />
+                     <BlueLink v-bind:link="'#'" v-bind:textValue="'Use my current email address instead'" />
                      <div class="password-div">
                         <div class="input-pair-1">
                             <TextInput v-bind:inputType="showPassword ? 'text' : 'password'" v-bind:id="'password'" v-bind:placeHolder="'Password'" v-bind:error="v$.password.password.$error" v-model:data.sync="password.password" />

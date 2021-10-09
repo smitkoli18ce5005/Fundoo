@@ -10,3 +10,4 @@
 * Code refactoring with separate JS, scss files
 * Validation for signup page using Vuelidate and added custom error messages
 * Created material FundooLogo component
+* Created FundooHeader component

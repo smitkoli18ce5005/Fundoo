@@ -2,11 +2,7 @@
     <div class="login-outer-div">
         <div class="login-inner-div">
             <div class="login-form">
-                <div class="input-pair-2">
-                    <h1 class="gradient-text">Fundoo</h1>
-                    <h1 class="heading-h1">Sign in</h1>
-                    <span class="small-text-3">Use your Fundoo Account</span>
-                </div>
+                <FundooHeader v-bind:title="'Sign in'" v-bind:subTitle="'Use your Fundoo Account'"/>
                 <div class="input-pair-2">
                     <TextInput v-bind:inputType="'text'" v-bind:id="'email-or-phone'" v-bind:placeHolder="'Email or phone'" v-bind:error="false" />
                     <small v-if="false" class="small-text-1 error">There was an error</small>
