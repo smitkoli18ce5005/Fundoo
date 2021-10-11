@@ -1,7 +1,7 @@
 import './SignIn.scss'
 
 import useVuelidate from '@vuelidate/core'
-import { required, email, minLength, helpers } from '@vuelidate/validators'
+import { required, email, helpers } from '@vuelidate/validators'
 
 import FundooHeader from '@/components/FundooHeader/FundooHeader.vue'
 import TextInput from '@/components/Material/TextInput/TextInput.vue'
@@ -34,8 +34,7 @@ export default {
                 email:  helpers.withMessage('Please enter a valid email', email)
             },
             password: {
-                required: helpers.withMessage('Enter a password', required), 
-                minLength: helpers.withMessage('Use 8 characters or more for your password', minLength(8))
+                required: helpers.withMessage('Enter a password', required)
             }
         }
     },
@@ -48,8 +47,8 @@ export default {
                         email: this.email,
                         password: this.password
                     }
-                    const res = await axios.post('http://localhost:2000/user/login', currentData)
-                    console.log(res.data)
+                    const res = await axios.post('/user/login', currentData)
+                    console.log(res.data.message)
                 } else {
                     console.log("Validation failed")
                 }

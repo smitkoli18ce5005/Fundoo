@@ -13,3 +13,4 @@
 * Created FundooHeader component
 * Connected frontend with backend for signup page
 * Connected frontend with backend for signin page along with validation
+* Connected frontend with backend for Forget and Reset password page along with validation
