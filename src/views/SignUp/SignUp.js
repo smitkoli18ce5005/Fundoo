@@ -66,18 +66,23 @@ export default{
         }
     },
     methods: {
-        submitForm () {
-            this.v$.$validate()
-            if(!this.v$.$error) {
-                let data = {
-                    firstName: 'smit',
-                    lastName: 'koli',
-                    email: 'smit@mydomain.com',
-                    password: 'smit@123'
+        async submitForm () {
+            try {
+                this.v$.$validate()
+                if(!this.v$.$error) {
+                    let currentData = {
+                        firstName: this.name.firstName,
+                        lastName: this.name.lastName,
+                        email: this.email,
+                        password: this.password.password
+                    }
+                    const res = axios.post('/user/userSignUp', currentData)
+                    console.log(res.data.message)
+                } else {
+                    console.log("Validation failed")
                 }
-                axios.post('http://localhost:2000/user/userSignUp', data).then((res) => console.log(res)).catch((err) => console.log(err))
-            } else {
-                alert("Failed")
+            } catch(err) {
+                console.log(err)
             }
         }
     }

@@ -4,11 +4,11 @@
             <div class="login-form">
                 <FundooHeader v-bind:title="'Sign in'" v-bind:subTitle="'Use your Fundoo Account'"/>
                 <div class="input-pair-2">
-                    <TextInput v-bind:inputType="'text'" v-bind:id="'email-or-phone'" v-bind:placeHolder="'Email or phone'" v-bind:error="false" />
+                    <TextInput v-bind:inputType="'text'" v-bind:id="'email-or-phone'" v-bind:placeHolder="'Email'" v-bind:error="false" v-model:data.sync="email" />
                     <small v-if="false" class="small-text-1 error">There was an error</small>
                 </div>
                 <div class="input-pair-2">
-                    <TextInput v-bind:inputType="'password'" v-bind:id="'password'" v-bind:placeHolder="'Password'" v-bind:error="false" />
+                    <TextInput v-bind:inputType="'password'" v-bind:id="'password'" v-bind:placeHolder="'Password'" v-bind:error="false" v-model:data.sync="password" />
                     <small v-if="false" class="small-text-1 error">There was an error</small>
                     <BlueLink v-bind:link="'http://localhost:8080/forgetPassword'" v-bind:textValue="'Forgot password?'" />
                 </div>
