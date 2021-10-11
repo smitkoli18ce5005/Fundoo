@@ -8,6 +8,8 @@ import TextInput from '@/components/Material/TextInput/TextInput.vue'
 import BlueLink from '@/components/Material/BlueLink/BlueLink.vue'
 import BlueButton from '@/components/Material/BlueButton/BlueButton.vue'
 
+import axios from 'axios'
+
 export default{
     name: 'SignUp',
     components: {
@@ -67,7 +69,13 @@ export default{
         submitForm () {
             this.v$.$validate()
             if(!this.v$.$error) {
-                alert("success")
+                let data = {
+                    firstName: 'smit',
+                    lastName: 'koli',
+                    email: 'smit@mydomain.com',
+                    password: 'smit@123'
+                }
+                axios.post('http://localhost:2000/user/userSignUp', data).then((res) => console.log(res)).catch((err) => console.log(err))
             } else {
                 alert("Failed")
             }
