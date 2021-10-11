@@ -24,7 +24,7 @@ export default {
     data() {
         return {
             forgetPasswordURL: process.env.VUE_APP_FORGET_PASSWORD,
-            showPassword: true,
+            showPassword: false,
             password: '',
             confirm: ''
         } 
@@ -49,9 +49,7 @@ export default {
                     let currentData = {
                         password: this.password
                     }
-                    var url = window.location.href
-                    const access_token = url.split("/").pop();
-                    const res = await axios.patch('/user/resetPassword/' +access_token, currentData)
+                    const res = await axios.patch('/user/resetPassword/' +this.$route.params.token, currentData)
                     console.log(res.data.message)
                 } else {
                     console.log("Validation failed")
