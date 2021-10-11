@@ -76,7 +76,7 @@ export default{
                         email: this.email,
                         password: this.password.password
                     }
-                    const res = axios.post('/user/userSignUp', currentData)
+                    const res = await axios.post('/user/userSignUp', currentData)
                     console.log(res.data.message)
                 } else {
                     console.log("Validation failed")
