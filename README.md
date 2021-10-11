@@ -12,3 +12,4 @@
 * Created material FundooLogo component
 * Created FundooHeader component
 * Connected frontend with backend for signup page
+* Connected frontend with backend for signin page along with validation

@@ -4,12 +4,12 @@
             <div class="login-form">
                 <FundooHeader v-bind:title="'Sign in'" v-bind:subTitle="'Use your Fundoo Account'"/>
                 <div class="input-pair-2">
-                    <TextInput v-bind:inputType="'text'" v-bind:id="'email-or-phone'" v-bind:placeHolder="'Email'" v-bind:error="false" v-model:data.sync="email" />
-                    <small v-if="false" class="small-text-1 error">There was an error</small>
+                    <TextInput v-bind:inputType="'text'" v-bind:id="'email-or-phone'" v-bind:placeHolder="'Email'" v-bind:error="v$.email.$error" v-model:data.sync="email" />
+                    <small v-if="v$.email.$error" class="small-text-1 error" v-text="v$.email.$errors[0].$message"></small>
                 </div>
                 <div class="input-pair-2">
-                    <TextInput v-bind:inputType="'password'" v-bind:id="'password'" v-bind:placeHolder="'Password'" v-bind:error="false" v-model:data.sync="password" />
-                    <small v-if="false" class="small-text-1 error">There was an error</small>
+                    <TextInput v-bind:inputType="'password'" v-bind:id="'password'" v-bind:placeHolder="'Password'" v-bind:error="v$.password.$error" v-model:data.sync="password" />
+                    <small v-if="v$.password.$error" class="small-text-1 error" v-text="v$.password.$errors[0].$message"></small>
                     <BlueLink v-bind:link="'http://localhost:8080/forgetPassword'" v-bind:textValue="'Forgot password?'" />
                 </div>
                 <div class="input-pair-2">
@@ -18,7 +18,7 @@
                 </div>
                 <div class="signin-div">
                     <BlueLink v-bind:link="'http://localhost:8080/SignUp'" v-bind:textValue="'Create account'" />
-                    <BlueButton v-bind:textValue="'Next'" />
+                    <BlueButton v-bind:textValue="'Next'" @click="submitForm()"/>
                 </div>
             </div>
         </div>
