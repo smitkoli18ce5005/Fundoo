@@ -23,6 +23,9 @@ export default {
     },
     data() {
         return {
+            learnMoreURL: process.env.VUE_APP_API_LEARN_MORE,
+            signUpURL: process.env.VUE_APP_SIGN_UP,
+            forgetPasswordURL: process.env.VUE_APP_FORGET_PASSWORD,
             email: '',
             password: ''
         }

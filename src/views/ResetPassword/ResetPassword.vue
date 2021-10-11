@@ -16,7 +16,7 @@
                     <small class="small-text-2">Show password</small>
                 </div>
                 <div class="signin-div">
-                        <BlueLink v-bind:link="'http://localhost:8080/forgetPassword'" v-bind:textValue="'Resend email?'" @click="submitForm()"/>
+                        <BlueLink v-bind:link="forgetPasswordURL" v-bind:textValue="'Resend email?'" @click="submitForm()"/>
                         <BlueButton v-bind:textValue="'Next'" @click="submitForm()"/>
                 </div>
             </div>

@@ -10,14 +10,14 @@
                 <div class="input-pair-2">
                     <TextInput v-bind:inputType="'password'" v-bind:id="'password'" v-bind:placeHolder="'Password'" v-bind:error="v$.password.$error" v-model:data.sync="password" />
                     <small v-if="v$.password.$error" class="small-text-1 error" v-text="v$.password.$errors[0].$message"></small>
-                    <BlueLink v-bind:link="'http://localhost:8080/forgetPassword'" v-bind:textValue="'Forgot password?'" />
+                    <BlueLink v-bind:link="forgetPasswordURL" v-bind:textValue="'Forgot password?'" />
                 </div>
                 <div class="input-pair-2">
                     <span class="small-text-3 smaller">Not your computer? Use Guest mode to sign in privately.</span>
-                    <BlueLink v-bind:link="'https://support.google.com/chrome/answer/6130773?hl=en'" v-bind:textValue="'Learn more'" />
+                    <BlueLink v-bind:link="learnMoreURL" v-bind:textValue="'Learn more'" />
                 </div>
                 <div class="signin-div">
-                    <BlueLink v-bind:link="'http://localhost:8080/SignUp'" v-bind:textValue="'Create account'" />
+                    <BlueLink v-bind:link="signUpURL" v-bind:textValue="'Create account'" />
                     <BlueButton v-bind:textValue="'Next'" @click="submitForm()"/>
                 </div>
             </div>

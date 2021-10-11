@@ -23,6 +23,7 @@ export default {
     },
     data() {
         return {
+            forgetPasswordURL: process.env.VUE_APP_FORGET_PASSWORD,
             showPassword: true,
             password: '',
             confirm: ''

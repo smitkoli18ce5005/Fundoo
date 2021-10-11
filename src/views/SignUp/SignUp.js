@@ -24,6 +24,7 @@ export default{
     data () {
         return {
             showPassword: false,
+            signInUrl: process.env.VUE_APP_SIGN_IN,
             name: {
                 firstName: '',
                 lastName: ''
