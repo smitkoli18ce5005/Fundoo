@@ -28,6 +28,7 @@ export default {
             learnMoreURL: process.env.VUE_APP_API_LEARN_MORE,
             signUpURL: process.env.VUE_APP_SIGN_UP,
             forgetPasswordURL: process.env.VUE_APP_FORGET_PASSWORD,
+            dashboardURL: process.env.VUE_APP_API_DASHBOARD,
             email: '',
             password: ''
         }
@@ -55,6 +56,7 @@ export default {
                     }
                     const res = await axios.post('/user/login', currentData)
                     console.log(res.data.message)
+                    window.location.href = this.dashboardURL
                 } else {
                     console.log("Validation failed")
                 }

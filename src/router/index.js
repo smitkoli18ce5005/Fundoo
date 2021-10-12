@@ -4,6 +4,7 @@ import SignUp from '../views/SignUp/SignUp.vue'
 import SignIn from '../views/SignIn/SignIn.vue'
 import ForgetPassword from '../views/ForgetPassword/ForgetPassword.vue'
 import ResetPassword from '../views/ResetPassword/ResetPassword.vue'
+import Dashboard from '../views/Dashboard/Dashboard.vue'
 
 const routes = [
   {
@@ -35,6 +36,11 @@ const routes = [
     path: '/ResetPassword/:token',
     name: 'ResetPassword',
     component: ResetPassword
+  },
+  {
+    path: '/Dashboard',
+    name: 'Dashboard',
+    component: Dashboard
   }
 ]
 

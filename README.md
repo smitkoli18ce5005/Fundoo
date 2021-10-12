@@ -15,3 +15,4 @@
 * Connected frontend with backend for signin page along with validation
 * Connected frontend with backend for Forget and Reset password page along with validation
 * Made disappearing snackbar component in vuex to show errors and also made it responsive
+* Made google keep header with reusable components

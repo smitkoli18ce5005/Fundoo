@@ -1,0 +1,21 @@
+.action-buttons-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1%;
+    button{
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+    }
+}
+.action-buttons-div{
+    button:hover{
+        background-color: #c5c5c5;
+        transition: 0.2s ease-in-out;
+    }
+}
