@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import TodooComponentStore from './modules/TodooComponentStore'
+import WarningBoxStore from './modules/WarningBoxStore'
 
 export default createStore({
   state: {
@@ -9,6 +10,7 @@ export default createStore({
   actions: {
   },
   modules: {
-    TodooComponentStore
+    TodooComponentStore,
+    WarningBoxStore
   }
 })

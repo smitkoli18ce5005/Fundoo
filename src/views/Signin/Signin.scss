@@ -64,7 +64,7 @@
     .login-form{
         grid-template-rows: repeat(5, 0.6fr);
         .signin-div{
-            margin-top: 0;
+            margin-top: auto;
         }
     }
 }
@@ -75,7 +75,7 @@
             margin-top: 0;
         }
         .signin-div{
-            margin-bottom: 30px;
+            margin-top: 30px;
         }
     }
 }

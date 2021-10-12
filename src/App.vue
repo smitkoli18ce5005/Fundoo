@@ -1,11 +1,24 @@
 <template>
+<div class="app">
   <div id="nav" style="display:none;">
     <!--<router-link to="/">Registration</router-link> |
     <router-link to="/Todoo">Todoo</router-link>-->
   </div>
   <router-view/>
+  <WarningBox />
+</div>
+  
 </template>
 
+<script>
+import WarningBox from '@/components/WarningBox/WarningBox.vue'
+export default {
+  name: 'App',
+  components:{
+    WarningBox
+  }
+}
+</script>
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');

@@ -10,6 +10,8 @@ import BlueButton from '@/components/Material/BlueButton/BlueButton.vue'
 
 import axios from 'axios'
 
+import { mapActions } from 'vuex'
+
 export default{
     name: 'SignUp',
     components: {
@@ -67,6 +69,7 @@ export default{
         }
     },
     methods: {
+        ...mapActions(["addNotification"]),
         async submitForm () {
             try {
                 this.v$.$validate()
@@ -79,11 +82,13 @@ export default{
                     }
                     const res = await axios.post('/user/userSignUp', currentData)
                     console.log(res.data.message)
+                    window.location.href = this.signInUrl
                 } else {
                     console.log("Validation failed")
                 }
             } catch(err) {
                 console.log(err)
+                this.addNotification("Registration failed")
             }
         }
     }

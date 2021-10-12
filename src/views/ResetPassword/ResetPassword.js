@@ -10,6 +10,8 @@ import BlueButton from '@/components/Material/BlueButton/BlueButton.vue'
 
 import axios from 'axios'
 
+import { mapActions } from 'vuex'
+
 export default {
     name: 'ResetPassword',
     components:{
@@ -42,6 +44,7 @@ export default {
         }
     },
     methods: {
+        ...mapActions(["addNotification"]),
         async submitForm () {
             try {
                 this.v$.$validate()
@@ -56,6 +59,7 @@ export default {
                 }
             } catch(err) {
                 console.log(err)
+                this.addNotification("Failed to reset password")
             }
         }
     }
