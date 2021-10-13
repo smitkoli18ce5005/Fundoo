@@ -1,5 +1,10 @@
 import './KeepLogo.scss'
 
+import { mapActions } from 'vuex'
+
 export default{
-    name: 'KeepLogo'
+    name: 'KeepLogo',
+    methods:{
+        ...mapActions(["sideNavSwitch"])
+    }
 }
