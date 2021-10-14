@@ -3,7 +3,10 @@
         <DashboardHeader />
         <div class="content-div">
             <SideNavigation />
-            <NewNote />
+            <div class="notes-content">
+                <NewNote />
+                <NotesHolder />
+            </div>
         </div>
     </div>
 </template>

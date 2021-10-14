@@ -18,3 +18,4 @@
 * Made google keep header with reusable components
 * Made Side Navigation component for dashboard
 * Created New Note component for adding notes
+* Created Display Note component for adding notes
