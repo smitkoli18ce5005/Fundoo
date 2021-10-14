@@ -17,3 +17,4 @@
 * Made disappearing snackbar component in vuex to show errors and also made it responsive
 * Made google keep header with reusable components
 * Made Side Navigation component for dashboard
+* Created New Note component for adding notes
