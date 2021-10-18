@@ -18,3 +18,12 @@
         transition: 0.2s ease-in-out;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .account-buttons-div{
+        button{
+            height: 30px;
+            width: 30px;
+        }
+    }
+} 

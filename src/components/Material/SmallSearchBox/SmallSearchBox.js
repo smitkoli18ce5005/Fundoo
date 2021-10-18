@@ -1,9 +1,9 @@
-import './ActionButtons.scss'
+import './SmallSearchBox.scss'
 
 import { mapGetters, mapActions } from 'vuex'
 
-export default{
-    name: 'ActionButtons',
+export default {
+    name: 'SmallSearchBox',
     computed: mapGetters(["returnSmallSearchBox"]),
     methods: {
         ...mapActions(["smallSearchBoxSwitch"])

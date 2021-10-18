@@ -1,15 +1,63 @@
 .notes-holder-div{
-    width: 90vw;
+    width: 90%;
     height: 100%;
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 30px;
 
     .notes-view{
         width: 100%;
         height: 100%;  
         display: grid;
-        grid-template-columns: repeat(9, 1fr);
+        grid-template-columns: repeat(8, 1fr);
         grid-gap: 16px;
+    }
+}
+
+@media screen and (max-width: 2400px) {   
+    .notes-holder-div{
+        .notes-view{
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 2000px) {   
+    .notes-holder-div{
+        .notes-view{
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 1800px) {   
+    .notes-holder-div{
+        .notes-view{
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {   
+    .notes-holder-div{
+        .notes-view{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {   
+    .notes-holder-div{
+        .notes-view{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .notes-holder-div{
+        .notes-view{
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 }

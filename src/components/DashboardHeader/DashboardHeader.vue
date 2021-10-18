@@ -1,6 +1,7 @@
 <template>
     <div class="dashboard-header-div">
-        <KeepLogo />
+        <SmallSearchBox />
+        <KeepLogo v-if="!returnSmallSearchBox"  />
         <div class="action-component">
             <SearchBox />
             <ActionButtons />

@@ -37,3 +37,21 @@
         transition: 0.2s ease-in-out;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .keep-logo-div{
+        button{
+            height: 30px;
+            width: 30px;
+        }
+        a{
+            img{
+                height: 30px;
+                width: 30px;
+            }
+            span{
+                font-size: 18px;
+            }
+        }
+    }
+} 

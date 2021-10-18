@@ -1,5 +1,5 @@
 const state = {
-    sideNav: false
+    sideNav: true
 }
 
 const getters = {

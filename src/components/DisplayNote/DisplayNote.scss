@@ -1,9 +1,13 @@
 .display-note-div{
-    width: 220px;
+    max-width: 220px;
+    width: 100%;
     height: max-content;
     border-radius: 10px;
     border: 1px solid #c5c5c5;
     padding: 8px 12px;
+    
+    margin-left: auto;
+    margin-right: auto;
     .pair{
         margin-bottom: 8px;
         button{
