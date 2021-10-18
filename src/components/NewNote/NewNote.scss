@@ -1,6 +1,4 @@
 .new-note-div{
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 30px;
     font-family: 'Roboto', sans-serif;
 }
@@ -15,6 +13,8 @@
     @include flex;
     width: 600px;
     height: 44px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #fff;
     border-radius: 10px;
     border: 1px solid #fff;
@@ -60,6 +60,8 @@
     justify-content: space-between;
     width: 600px;
     height: max-content;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #fff;
     border-radius: 10px;
     border: 1px solid #fff;
@@ -89,6 +91,7 @@
 .pair{
     @include flex;
     .close-button{
+        display: block;
         height: 36px;
         width: 100px;
         border-radius: 5px;
@@ -105,3 +108,81 @@
         transition: 0.2s ease-in-out;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .take-note{
+        width: 80%;
+        margin-right: 2%;
+    }
+    .create-note{
+        width: 80%;
+        margin-right: 2%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .new-note-div{
+        margin-left: 10vw;
+    }
+    .take-note{
+        button{
+            height: 40px;
+            width: 40px;
+        }
+    }
+    .take-note,
+    .create-note{
+        button{
+            svg{
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .note-buttons-div {
+            padding-top: 0;
+            button{
+                margin-right: 1px;
+            }
+        }
+    }
+    .pair{
+        .close-button{
+            padding: 0;
+            height: 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .take-note, 
+    .create-note{
+        width: 85%;
+    }
+    .take-note{
+        height: 40px;
+        padding: 0 5px;
+        input{
+            height: 40px;
+        }
+        button{
+            height: 40px;
+            width: 40px;
+        }
+    }
+    .create-note{
+        padding: 0 5px;
+        .note-buttons-div {
+            .small-close-button{
+                display: block;
+            }
+            button{
+                margin-right: -1px;
+            }
+        }
+    }
+    .pair{
+        .close-button{
+            font-size: 12px;
+        }
+    }
+} 

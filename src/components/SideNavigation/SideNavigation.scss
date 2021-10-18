@@ -3,6 +3,10 @@
     flex-direction: column;
     width: 280px;
     margin-top: 4px;
+    position: fixed;
+    left: 10px;
+    background-color: #fff;
+    z-index: 1000;
 }
 
 .routes{
@@ -16,6 +20,7 @@
     height: 48px;
     width: 280px;
     border-radius: 0 25px 25px 0;
+    padding-left: 5px;
     &.router-link-exact-active {
         background-color: #feefc3;
         pointer-events: none;
@@ -46,7 +51,7 @@
     height: 100vh;
     margin-top: 4px;
     position: fixed;
-    left: 10;
+    left: 10px;
     background-color: #fff;
 }
 
@@ -62,6 +67,7 @@
     min-width: 48px;
     width: 100%;
     border-radius: 25px 25px 25px 25px;
+    padding-left: 5px;
     &.router-link-exact-active {
         background-color: #feefc3;
         pointer-events: none;
@@ -96,3 +102,47 @@
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+    .routes{
+        height: 40px;
+        width: 280px;
+        svg{
+            height: 20px;
+            width: 20px;
+            padding: 0 6px;
+        }
+    }
+    .routes1{
+        height: 40px;
+        min-width: 34px;
+        svg{
+            height: 20px;
+            width: 20px;
+            padding: 0 6px;
+        }
+    }
+    .side-navigation-div{
+        background-color: #fff;
+        width: 280px;
+        height: 100vh;
+        position: fixed;
+        padding-right: 5px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    .side-navigation-div1:hover{
+        width: 280px;
+    }
+} 
+
+@media screen and (max-width: 320px) {
+    .routes{
+        width: 220px;
+    }
+    .side-navigation-div{
+        width: 220px;
+    }
+    .side-navigation-div1:hover{
+        width: 220px;
+    }
+} 

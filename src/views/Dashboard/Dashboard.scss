@@ -1,10 +1,20 @@
 .content-div{
     display: flex;
     flex-direction: row;
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    width: calc(100% - 10px);
 }
 
 .notes-content{
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
 }
+
+@media screen and (max-width: 480px) {
+    .content-div{
+        top: 40px;
+    }
+} 
