@@ -3,6 +3,7 @@ import TodooComponentStore from './modules/TodooComponentStore'
 import WarningBoxStore from './modules/WarningBoxStore'
 import SideNavigationStore from './modules/SideNavigationStore'
 import SmallSearchBoxStore from './modules/SmallSearchBoxStore'
+import ListViewStore from './modules/ListViewStore'
 
 export default createStore({
   state: {
@@ -15,6 +16,7 @@ export default createStore({
     TodooComponentStore,
     WarningBoxStore,
     SideNavigationStore,
-    SmallSearchBoxStore
+    SmallSearchBoxStore,
+    ListViewStore
   }
 })

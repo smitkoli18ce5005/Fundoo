@@ -1,6 +1,6 @@
 <template>
     <div class="notes-holder-div">
-        <div class="notes-view">
+        <div class="notes-view" :id="returnListViewForDisplay">
             <DisplayNote />
             <DisplayNote />
             <DisplayNote />

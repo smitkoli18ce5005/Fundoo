@@ -1,5 +1,5 @@
 <template>
-    <div class="display-note-div">
+    <div class="display-note-div" :id="returnListViewForHeader">
         <div class="pair">
             <label for="title">Title</label>
             <button>

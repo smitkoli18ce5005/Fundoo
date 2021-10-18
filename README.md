@@ -21,3 +21,4 @@
 * Created Display Note component for adding notes
 * Made Dashboard Header responsive and added Small Search Box component which can be toggled using Search button
 * Made Add note and Side navigation responsive
+* Added list view functionality and made entire dashboard responsive

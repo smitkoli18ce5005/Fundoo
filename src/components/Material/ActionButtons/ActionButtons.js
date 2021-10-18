@@ -6,6 +6,6 @@ export default{
     name: 'ActionButtons',
     computed: mapGetters(["returnSmallSearchBox"]),
     methods: {
-        ...mapActions(["smallSearchBoxSwitch"])
+        ...mapActions(["smallSearchBoxSwitch", "listViewSwitch"])
     }
 }

@@ -34,15 +34,15 @@
         .search-button{
             display: block;
         }
+        .list-button{
+            display: none;
+        }
         margin-left: auto;
     }
 }
 
 @media screen and (max-width: 480px) {
     .action-buttons-div{
-        .list-button{
-            display: none;
-        }
         button{
             height: 30px;
             width: 30px;

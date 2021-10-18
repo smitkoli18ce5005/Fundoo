@@ -1,8 +1,5 @@
 .notes-holder-div{
-    width: 90%;
-    height: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 4vw;
     margin-top: 30px;
 
     .notes-view{
@@ -10,14 +7,21 @@
         height: 100%;  
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        grid-gap: 16px;
+        grid-gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
     }
+}
+
+#notes-list{
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 2400px) {   
     .notes-holder-div{
         .notes-view{
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(7, 1fr);
         }
     }
 }
@@ -25,7 +29,7 @@
 @media screen and (max-width: 2000px) {   
     .notes-holder-div{
         .notes-view{
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(6, 1fr);
         }
     }
 }
@@ -33,7 +37,7 @@
 @media screen and (max-width: 1800px) {   
     .notes-holder-div{
         .notes-view{
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
         }
     }
 }
@@ -41,7 +45,7 @@
 @media screen and (max-width: 1400px) {   
     .notes-holder-div{
         .notes-view{
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 }
@@ -49,7 +53,8 @@
 @media screen and (max-width: 1200px) {   
     .notes-holder-div{
         .notes-view{
-            grid-template-columns: repeat(2, 1fr);
+            width: 80%;
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }
@@ -57,7 +62,18 @@
 @media screen and (max-width: 992px) {
     .notes-holder-div{
         .notes-view{
-            grid-template-columns: repeat(1, 1fr);
+            width: 70%;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .notes-holder-div{
+    
+        .notes-view{
+            display: flex;
+            flex-direction: column;
         }
     }
 }
