@@ -5,6 +5,8 @@ import SignIn from '../views/SignIn/SignIn.vue'
 import ForgetPassword from '../views/ForgetPassword/ForgetPassword.vue'
 import ResetPassword from '../views/ResetPassword/ResetPassword.vue'
 import Dashboard from '../views/Dashboard/Dashboard.vue'
+import Archive from '../views/Archive/Archive.vue'
+import Trash from '../views/Trash/Trash.vue'
 
 const routes = [
   {
@@ -41,6 +43,16 @@ const routes = [
     path: '/Dashboard',
     name: 'Dashboard',
     component: Dashboard
+  },
+  {
+    path: '/Archive',
+    name: 'Archive',
+    component: Archive
+  },
+  {
+    path: '/Trash',
+    name: 'Trash',
+    component: Trash
   }
 ]
 
