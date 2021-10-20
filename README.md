@@ -24,3 +24,4 @@
 * Added list view functionality and made entire dashboard responsive
 * Created Archive and Trash notes page
 * Implemented add notes functionality
+* Implemented display note functionality

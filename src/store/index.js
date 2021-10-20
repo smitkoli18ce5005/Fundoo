@@ -4,6 +4,7 @@ import WarningBoxStore from './modules/WarningBoxStore'
 import SideNavigationStore from './modules/SideNavigationStore'
 import SmallSearchBoxStore from './modules/SmallSearchBoxStore'
 import ListViewStore from './modules/ListViewStore'
+import NoteStore from './modules/NoteStore'
 
 export default createStore({
   state: {
@@ -17,6 +18,7 @@ export default createStore({
     WarningBoxStore,
     SideNavigationStore,
     SmallSearchBoxStore,
-    ListViewStore
+    ListViewStore,
+    NoteStore
   }
 })

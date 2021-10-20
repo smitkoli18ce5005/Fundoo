@@ -1,33 +1,9 @@
 <template>
     <div class="notes-holder-div">
         <div class="notes-view" :id="returnListViewForDisplay">
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
-            <DisplayNote />
+            <div class="display-note-holder" v-for="note in returnAllNotes" v-bind:key="note.userID">
+                <DisplayNote v-bind:data="note"/>
+            </div>
         </div>
     </div>
 </template>

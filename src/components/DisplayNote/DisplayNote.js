@@ -6,8 +6,18 @@ import { mapGetters } from 'vuex'
 
 export default{
     name: 'DisplayNote',
-    computed: mapGetters(["returnListViewForHeader"]),
     components:{
         NoteButtons
-    }
+    },
+    props:{
+        data: {
+            type: Object
+        }
+    },
+    data() {
+        return {
+            noteData: this.data
+        } 
+    },
+    computed: mapGetters(["returnListViewForHeader"])
 }

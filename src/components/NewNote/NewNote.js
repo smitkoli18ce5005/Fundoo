@@ -15,7 +15,7 @@ export default{
         }
     },
     methods: {
-        ...mapActions(["addNotification"]),
+        ...mapActions(["addNotification", "updateAllNotes"]),
         async newNoteSwitch(){
             try{
                 let data = {
@@ -23,6 +23,7 @@ export default{
                     description: this.description
                 }
                 await NotesService.addNote(data)
+                this.updateAllNotes(data)
                 this.newNoteBoolean = !this.newNoteBoolean
                 this.title = ''
                 this.description = ''
