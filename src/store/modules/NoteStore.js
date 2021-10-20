@@ -20,20 +20,36 @@ const actions = {
                   'Authorization': 'Bearer ' + localStorage.getItem('token')
                 }
             })
-            console.log(res.data.data)
             commit('GET_ALL_NOTES', res.data.data)
+        }catch(err){
+            console.log(err)
+        }
+    },
+    async getArchivedNotes({commit}){
+        try{
+            const res = await axios.get('/notes/getAllArchivedNotes', {
+                headers: {
+                  'Authorization': 'Bearer ' + localStorage.getItem('token')
+                }
+            })
+            commit('GET_ARCHIVED_NOTES', res.data.data)
         }catch(err){
             console.log(err)
         }
     },
     updateAllNotes({commit}, data){
         commit('UPDATE_ALL_NOTES', data)
+    },
+    updateArchivedNotes({commit}, data){
+        commit('UPDATE_ARCHIVED_NOTES', data)
     }
 }
 
 const mutations = {
     GET_ALL_NOTES: (state, data) => (state.allNotes = data.reverse()),
-    UPDATE_ALL_NOTES: (state, data) => (state.allNotes.unshift(data))
+    GET_ARCHIVED_NOTES: (state, data) => (state.archivedNotes = data),
+    UPDATE_ALL_NOTES: (state, data) => (state.allNotes.unshift(data)),
+    UPDATE_ARCHIVED_NOTES: (state, data) => (state.archivedNotes = state.archivedNotes.filter((note) => note._id != data._id))
 }
 
 export default{state, getters, actions, mutations}

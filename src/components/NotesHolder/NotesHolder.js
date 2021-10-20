@@ -6,14 +6,20 @@ import { mapGetters, mapActions } from 'vuex'
 
 export default{
     name: 'NotesHolder',
-    computed: mapGetters(["returnListViewForDisplay", "returnAllNotes"]),
     components:{
         DisplayNote
     },
+    props:{
+        comp: {
+            type: String
+        }
+    },
+    computed: mapGetters(["returnListViewForDisplay", "returnAllNotes", "returnArchivedNotes", "returnTrashedNotes"]),
     methods: {
-        ...mapActions(["getAllNotes"])
+        ...mapActions(["getAllNotes", "getArchivedNotes"])
     },
     created(){
-        this.getAllNotes()
+        this.getAllNotes(),
+        this.getArchivedNotes()
     }
 }

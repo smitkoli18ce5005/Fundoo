@@ -7,7 +7,7 @@
             </button>
         </div>
         <label for="content" v-text="noteData.description"></label>
-        <NoteButtons />
+        <NoteButtons v-bind:data="noteData" />
     </div>
 </template>
 

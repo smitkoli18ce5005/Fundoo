@@ -5,7 +5,7 @@
             <SideNavigation />
             <div class="notes-content">
                 <NewNote />
-                <NotesHolder />
+                <NotesHolder v-bind:comp="'notes'"/>
             </div>
         </div>
     </div>

@@ -25,3 +25,4 @@
 * Created Archive and Trash notes page
 * Implemented add notes functionality
 * Implemented display note functionality
+* Implemented archive note functionality

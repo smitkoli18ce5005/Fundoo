@@ -19,5 +19,10 @@ export default{
             noteData: this.data
         } 
     },
+    watch: { 
+        data: function(newVal) { 
+        this.noteData = newVal
+        }
+    },
     computed: mapGetters(["returnListViewForHeader"])
 }

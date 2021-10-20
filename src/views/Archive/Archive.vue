@@ -4,7 +4,7 @@
         <div class="content-div">
             <SideNavigation />
             <div class="notes-content">
-                <NotesHolder />
+                <NotesHolder v-bind:comp="'archived'"/>
             </div>
         </div>
     </div>

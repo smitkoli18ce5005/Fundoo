@@ -22,11 +22,16 @@ export default{
                     title: this.title,
                     description: this.description
                 }
-                await NotesService.addNote(data)
-                this.updateAllNotes(data)
+                if(data.title.length > 3 && data.description.length > 3){
+                    await NotesService.addNote(data)
+                    this.updateAllNotes(data)
+                } else{
+                    this.addNotification("Failed to add notes")
+                }
                 this.newNoteBoolean = !this.newNoteBoolean
                 this.title = ''
                 this.description = ''
+                
             } catch(err){
                 console.log(err)
                 this.addNotification("Failed to add notes")

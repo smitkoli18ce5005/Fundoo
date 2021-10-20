@@ -15,6 +15,15 @@ let NoteService = {
         } catch(err){
             console.log(err)
         }
+    },
+
+    async archiveNote(data){
+        try{
+            const res = await axios.patch(this.baseURL + '/notes/archiveNote/' +data._id, this.header)
+            console.log(res.data.message)
+        } catch(err){
+            console.log(err)
+        }
     }
 }
 
