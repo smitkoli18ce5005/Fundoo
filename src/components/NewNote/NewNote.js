@@ -1,17 +1,36 @@
 import './NewNote.scss'
 
 import NoteButtons from '../NoteButtons/NoteButtons.vue'
+import { mapActions } from 'vuex'
+
+import NotesService from '../../services/NotesService'
 
 export default{
     name: 'NewNote',
     data(){
         return{
-            newNoteBoolean: true
+            newNoteBoolean: true,
+            title: '',
+            description: ''
         }
     },
     methods: {
-        newNoteSwitch(){
-            this.newNoteBoolean = !this.newNoteBoolean
+        ...mapActions(["addNotification"]),
+        async newNoteSwitch(){
+            try{
+                let data = {
+                    title: this.title,
+                    description: this.description
+                }
+                const res = await NotesService.addNote(data)
+                console.log(res.data.message)
+                this.newNoteBoolean = !this.newNoteBoolean
+                this.title = ''
+                this.description = ''
+            } catch(err){
+                console.log(err)
+                this.addNotification("Failed to add notes")
+            }
         }
     },
     components:{

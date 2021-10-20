@@ -55,8 +55,8 @@ export default {
                         password: this.password
                     }
                     const res = await axios.post('/user/login', currentData)
-                    console.log(res.data.message)
-                    window.location.href = this.dashboardURL
+                    localStorage.setItem('token', res.data.data.token)
+                    this.$router.push('/Dashboard')
                 } else {
                     console.log("Validation failed")
                 }
