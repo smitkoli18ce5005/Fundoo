@@ -22,8 +22,7 @@ export default{
                     title: this.title,
                     description: this.description
                 }
-                const res = await NotesService.addNote(data)
-                console.log(res.data.message)
+                await NotesService.addNote(data)
                 this.newNoteBoolean = !this.newNoteBoolean
                 this.title = ''
                 this.description = ''

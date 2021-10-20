@@ -11,7 +11,7 @@ let NoteService = {
     async addNote(data){
         try{
             const res = await axios.post(this.baseURL + '/notes/addNotes', data, this.header)
-            return res
+            console.log(res.data.message)
         } catch(err){
             console.log(err)
         }
