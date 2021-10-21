@@ -7,7 +7,7 @@ export default{
     name: 'NoteButtons',
     props: {
         comp: {
-            type: Object
+            type: String
         },
         data: {
             type: Object
@@ -16,6 +16,7 @@ export default{
     data() {
         return {
             noteButtonList: false,
+            noteColors: false,
             noteData: this.data
         }
     },
@@ -42,5 +43,12 @@ export default{
             await this.getArchivedNotes()
             await this.getTrashedNotes()
         },
+        async changeColor(color){
+            this.noteData.color = color
+            await NoteService.changeColor(this.noteData)
+            await this.getAllNotes()
+            await this.getArchivedNotes()
+            await this.getTrashedNotes()
+        }
     }
 }

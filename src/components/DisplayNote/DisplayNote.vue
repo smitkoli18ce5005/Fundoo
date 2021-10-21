@@ -1,5 +1,5 @@
 <template>
-    <div class="display-note-div" :id="returnListViewForHeader">
+    <div class="display-note-div" :id="returnListViewForHeader" :style="{ backgroundColor: noteData.color}">
         <div class="pair">
             <label for="title" v-text="noteData.title"></label>
             <button>

@@ -10,28 +10,32 @@ export default{
     data(){
         return{
             newNoteBoolean: true,
-            title: '',
-            description: ''
+            noteData:{  
+                title: '',
+                description: '',
+                color: '#ffffff'
+            },
         }
     },
     methods: {
         ...mapActions(["addNotification", "updateAllNotes"]),
         async newNoteSwitch(){
             try{
-                let data = {
-                    title: this.title,
-                    description: this.description
+                let note = {
+                    title: this.noteData.title,
+                    description: this.noteData.description,
+                    color: this.noteData.color
                 }
-                if(data.title.length > 3 && data.description.length > 3){
-                    await NotesService.addNote(data)
-                    this.updateAllNotes(data)
+                if(note.title.length > 3 && note.description.length > 3){
+                    await NotesService.addNote(note)
+                    this.updateAllNotes(note)
                 } else{
                     //this.addNotification("Failed to add notes")
                 }
                 this.newNoteBoolean = !this.newNoteBoolean
-                this.title = ''
-                this.description = ''
-                
+                this.noteData.title = ''
+                this.noteData.description = ''
+                this.noteData.color = '#ffffff'
             } catch(err){
                 console.log(err)
                 this.addNotification("Failed to add notes")

@@ -11,7 +11,7 @@ export default{
     },
     props:{
         comp: {
-            type: Object
+            type: String
         },
         data: {
             type: Object

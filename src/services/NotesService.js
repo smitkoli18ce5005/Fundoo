@@ -33,6 +33,15 @@ let NoteService = {
         } catch(err){
             console.log(err)
         }
+    },
+
+    async changeColor(data){
+        try{
+            const res = await axios.patch(this.baseURL + '/notes/updateNote/' +data._id, data, this.header)
+            console.log(res.data.message)
+        } catch(err){
+            console.log(err)
+        }
     }
 }
 
