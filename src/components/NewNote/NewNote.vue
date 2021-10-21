@@ -23,7 +23,7 @@
             </div>
             <input type="text" placeholder="Take a note..." v-model="description" autofocus>
             <div class="pair">
-                <NoteButtons />
+                <NoteButtons v-bind:comp="'notes'" />
                 <button class="close-button" @click="newNoteSwitch()">Close</button>
             </div>
         </div>

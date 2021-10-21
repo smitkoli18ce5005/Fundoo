@@ -27,7 +27,7 @@ export default{
     methods: {
         ...mapActions(["getAllNotes", "getArchivedNotes", "getTrashedNotes"]),
         returnDeleteButtons(){
-            return (this.comp != 'notes' && this.comp!= 'archive')
+            return (this.comp != 'notes' && this.comp!= 'archived')
         },
         async archiveButton(){
             await NoteService.archiveNote(this.noteData)
