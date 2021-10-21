@@ -37,6 +37,18 @@ const actions = {
             console.log(err)
         }
     },
+    async getTrashedNotes({commit}){
+        try{
+            const res = await axios.get('/notes/getAllTrashedNotes', {
+                headers: {
+                  'Authorization': 'Bearer ' + localStorage.getItem('token')
+                }
+            })
+            commit('GET_TRASHED_NOTES', res.data.data)
+        }catch(err){
+            console.log(err)
+        }
+    },
     updateAllNotes({commit}, data){
         commit('UPDATE_ALL_NOTES', data)
     },
@@ -48,6 +60,9 @@ const actions = {
 const mutations = {
     GET_ALL_NOTES: (state, data) => (state.allNotes = data.reverse()),
     GET_ARCHIVED_NOTES: (state, data) => (state.archivedNotes = data),
+    GET_TRASHED_NOTES: (state, data) => (state.trashedNotes = data),
+
+    
     UPDATE_ALL_NOTES: (state, data) => (state.allNotes.unshift(data)),
     UPDATE_ARCHIVED_NOTES: (state, data) => (state.archivedNotes = state.archivedNotes.filter((note) => note._id != data._id))
 }

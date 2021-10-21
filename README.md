@@ -26,3 +26,4 @@
 * Implemented add notes functionality
 * Implemented display note functionality
 * Implemented archive note functionality
+* Implemented trash note and restore note functionality

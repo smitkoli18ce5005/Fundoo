@@ -26,7 +26,7 @@ export default{
                     await NotesService.addNote(data)
                     this.updateAllNotes(data)
                 } else{
-                    this.addNotification("Failed to add notes")
+                    //this.addNotification("Failed to add notes")
                 }
                 this.newNoteBoolean = !this.newNoteBoolean
                 this.title = ''

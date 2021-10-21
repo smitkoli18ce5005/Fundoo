@@ -16,10 +16,11 @@ export default{
     },
     computed: mapGetters(["returnListViewForDisplay", "returnAllNotes", "returnArchivedNotes", "returnTrashedNotes"]),
     methods: {
-        ...mapActions(["getAllNotes", "getArchivedNotes"])
+        ...mapActions(["getAllNotes", "getArchivedNotes", "getTrashedNotes"])
     },
     created(){
         this.getAllNotes(),
         this.getArchivedNotes()
+        this.getTrashedNotes()
     }
 }

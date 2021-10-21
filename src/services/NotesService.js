@@ -24,6 +24,15 @@ let NoteService = {
         } catch(err){
             console.log(err)
         }
+    },
+
+    async trashNote(data){
+        try{
+            const res = await axios.delete(this.baseURL + '/notes/deleteNote/' +data._id, this.header)
+            console.log(res.data.message)
+        } catch(err){
+            console.log(err)
+        }
     }
 }
 

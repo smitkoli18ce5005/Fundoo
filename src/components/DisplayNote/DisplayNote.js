@@ -10,6 +10,9 @@ export default{
         NoteButtons
     },
     props:{
+        comp: {
+            type: Object
+        },
         data: {
             type: Object
         }
