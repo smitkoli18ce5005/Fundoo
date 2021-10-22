@@ -45,7 +45,7 @@ export default{
         },
         async changeColor(color){
             this.noteData.color = color
-            await NoteService.changeColor(this.noteData)
+            await NoteService.updateNote(this.noteData)
             await this.getAllNotes()
             await this.getArchivedNotes()
             await this.getTrashedNotes()

@@ -1,7 +1,8 @@
 <template>
-    <div class="notes-holder-div">
+        <div class="notes-holder-div">
         <div v-if="comp == 'notes'" class="notes-view" :id="returnListViewForDisplay">
             <div class="display-note-holder" v-for="note in returnAllNotes" v-bind:key="note.userID">
+                
                 <DisplayNote v-bind:data="note" v-bind:comp="comp"/>
             </div>
         </div>

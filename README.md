@@ -28,3 +28,4 @@
 * Implemented archive note functionality
 * Implemented trash note and restore note functionality
 * Implemented color functionality
+* Implemented popup component for updating note and also made it responsive
