@@ -8,7 +8,7 @@ import TextInput from '@/components/Material/TextInput/TextInput.vue'
 import BlueLink from '@/components/Material/BlueLink/BlueLink.vue'
 import BlueButton from '@/components/Material/BlueButton/BlueButton.vue'
 
-import axios from 'axios'
+import UserService from '../../services/UserService'
 
 import { mapActions } from 'vuex'
 
@@ -80,7 +80,7 @@ export default{
                         email: this.email,
                         password: this.password.password
                     }
-                    const res = await axios.post('/user/userSignUp', currentData)
+                    const res = await UserService.signUp(currentData)
                     console.log(res.data.message)
                     window.location.href = this.signInUrl
                 } else {

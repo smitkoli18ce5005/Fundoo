@@ -8,9 +8,8 @@ import TextInput from '@/components/Material/TextInput/TextInput.vue'
 import BlueLink from '@/components/Material/BlueLink/BlueLink.vue'
 import BlueButton from '@/components/Material/BlueButton/BlueButton.vue'
 
-import axios from 'axios'
-
 import { mapActions } from 'vuex'
+import UserService from '../../services/UserService'
 
 export default {
     name: 'ForgetPassword',
@@ -45,7 +44,7 @@ export default {
                     let currentData = {
                         email: this.email
                     }
-                    const res = await axios.post('/user/forgetPassword', currentData)
+                    const res = await UserService.forgetPassword(currentData)
                     console.log(res.data.message)
                 } else {
                     console.log("Validation failed")

@@ -8,7 +8,7 @@ import TextInput from '@/components/Material/TextInput/TextInput.vue'
 import BlueLink from '@/components/Material/BlueLink/BlueLink.vue'
 import BlueButton from '@/components/Material/BlueButton/BlueButton.vue'
 
-import axios from 'axios'
+import UserService from '../../services/UserService'
 
 import { mapActions } from 'vuex'
 
@@ -52,7 +52,7 @@ export default {
                     let currentData = {
                         password: this.password
                     }
-                    const res = await axios.patch('/user/resetPassword/' +this.$route.params.token, currentData)
+                    const res = await UserService.resetPassword(this.$route.params.token, currentData)
                     console.log(res.data.message)
                 } else {
                     console.log("Validation failed")

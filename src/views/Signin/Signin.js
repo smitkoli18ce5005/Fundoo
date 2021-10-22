@@ -8,7 +8,7 @@ import TextInput from '@/components/Material/TextInput/TextInput.vue'
 import BlueLink from '@/components/Material/BlueLink/BlueLink.vue'
 import BlueButton from '@/components/Material/BlueButton/BlueButton.vue'
 
-import axios from 'axios'
+import UserService from '../../services/UserService'
 
 import { mapActions } from 'vuex'
 
@@ -54,7 +54,7 @@ export default {
                         email: this.email,
                         password: this.password
                     }
-                    const res = await axios.post('/user/login', currentData)
+                    const res = await UserService.signIn(currentData)
                     localStorage.setItem('token', res.data.data.token)
                     this.$router.push('/Dashboard')
                 } else {
