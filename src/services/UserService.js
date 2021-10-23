@@ -2,6 +2,11 @@ import axios from "axios";
 
 let UserService = {
     baseURL: 'http://localhost:2000',
+    header: {
+        headers: {
+          'Authorization': 'Bearer ' + localStorage.getItem('token')
+        }
+    },
     async signIn(userData) {
         try{
             return await axios.post( this.baseURL + '/user/login', userData)
@@ -30,6 +35,15 @@ let UserService = {
             console.log(err)
         }
     },
+    async getUser(){
+        try{
+            const res = await axios.get(this.baseURL + '/user/getUser', this.header)
+            console.log(res.data.message)
+            return res
+        } catch(err){
+            console.log(err)
+        }
+    }
 }
 
 export default UserService

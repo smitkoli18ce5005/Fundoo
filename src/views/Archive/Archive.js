@@ -12,5 +12,10 @@ export default{
         SideNavigation,
         NewNote,
         NotesHolder
+    },
+    beforeMount(){
+        if(localStorage.getItem('token') == '' || localStorage.getItem('token') == null){
+            this.$router.push('/')
+        }
     }
 }

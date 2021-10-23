@@ -30,3 +30,4 @@
 * Implemented color functionality
 * Implemented popup component for updating note and also made it responsive
 * Added user service file
+* Added logout functionality and also made it responsive

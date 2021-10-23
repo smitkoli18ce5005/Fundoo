@@ -62,5 +62,10 @@ export default {
                 this.addNotification("Failed to reset password")
             }
         }
+    },
+    beforeMount(){
+        if(localStorage.getItem('token') != '' || localStorage.getItem('token') != null){
+            this.$router.push('/Dashboard')
+        }
     }
 }

@@ -54,5 +54,10 @@ export default {
                 this.addNotification("Failed to send email")
             }
         }
+    },
+    beforeMount(){
+        if(localStorage.getItem('token') != '' || localStorage.getItem('token') != null){
+            this.$router.push('/Dashboard')
+        }
     }
 }

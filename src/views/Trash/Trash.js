@@ -14,5 +14,10 @@ export default{
         NewNote,
         NotesHolder,
         EmptyTrash
+    },
+    beforeMount(){
+        if(localStorage.getItem('token') == '' || localStorage.getItem('token') == null){
+            this.$router.push('/')
+        }
     }
 }
