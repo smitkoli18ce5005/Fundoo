@@ -13,9 +13,9 @@ export default{
         NewNote,
         NotesHolder
     },
-    beforeMount(){
-        if(localStorage.getItem('token') == '' || localStorage.getItem('token') == null){
-            this.$router.push('/')
+    created(){
+        if(!localStorage.getItem('token')){
+            this.$router.push({name: "SignIn"})
         }
     }
 }

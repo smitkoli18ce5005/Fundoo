@@ -56,7 +56,7 @@ export default {
                     }
                     const res = await UserService.signIn(currentData)
                     localStorage.setItem('token', res.data.data.token)
-                    this.$router.push('/Dashboard')
+                    this.$router.push({name: "Dashboard"})
                 } else {
                     console.log("Validation failed")
                 }
@@ -64,6 +64,11 @@ export default {
                 console.log(err)
                 this.addNotification("Login failed")
             }
+        }
+    },
+    beforeCreate(){
+        if(!localStorage.getItem('token') == false){
+            this.$router.push({name: "Dashboard"})
         }
     }
 }
